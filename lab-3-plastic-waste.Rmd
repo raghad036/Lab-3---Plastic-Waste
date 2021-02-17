@@ -5,9 +5,9 @@ date: "`r Sys.Date()`"
 output: github_document
 ---
 
-Student Name:
+Student Name:Raghad mohmmed
 
-Student ID:
+Student ID: 2201003988
 
 ```{r include = FALSE}
 knitr::opts_chunk$set(eval = FALSE)
@@ -54,10 +54,14 @@ Did you expect this result?
 You might consider doing some research on Trinidad and Tobago to see why plastic waste per capita is so high there, or whether this is a data error.
 
 E1.  Plot, using histograms, the distribution of plastic waste per capita faceted by continent. What can you say about how the continents compare to each other in terms of their plastic waste per capita?
-
-
-**NOTE:** From this point onwards the plots and the output of the code are not displayed in the lab instructions, but you can and should write the code and view the results yourself.
-
+```{r }
+ggplot(data = plastic_waste,
+mapping = aes(x = plastic_waste_per_cap,
+color = continent,
+fill = continent)) +
+geom_histogram(alpha = 0.7)
+```
+answer:the africa is the most density continent and the south america is the most continent in plastic wate per cap
 
 Another way of visualizing numerical data is using density plots.
 
