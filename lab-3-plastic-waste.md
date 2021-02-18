@@ -1,7 +1,7 @@
 Lab 3 - Plastic Waste
 ================
 DSC 200 - Data Science I
-2021-02-17
+2021-02-18
 
 Student Name:Raghad mohmmed
 
@@ -118,11 +118,22 @@ E2. Recreate the density plots above using a different (lower) alpha
 level that works better for displaying the density curves for all
 continents.
 
+``` r
+ggplot(data = plastic_waste,
+mapping = aes(x = plastic_waste_per_cap,
+color = continent,
+fill = continent)) +
+geom_density(alpha = 0.4)
+```
+
 E3. Describe why we defined the `color` and `fill` of the curves by
 mapping aesthetics of the plot but we defined the `alpha` level as a
 characteristic of the plotting geom.
 
-Answer here:
+Answer here:\`Because here we represent a set of data (continents), not
+just color control, as the color here belong to the continents,and also
+the filling is related to the continents But the Alpha it’s talking
+about all Graphic(geme\_density)
 
 *Now is a good time to knit your document and commit and push your
 changes to GitHub with an appropriate commit message. Make sure to
@@ -179,7 +190,7 @@ use](https://ggplot2.tidyverse.org/reference/index.html#section-geoms).
 E8. Recreate the following plot, and interpret what you see in context
 of the data.
 
-![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 Knit, *commit (with an appropriate message), and push your changes to
 GitHub with an appropriate commit message. Make sure to commit and push
