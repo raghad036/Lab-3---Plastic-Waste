@@ -127,8 +127,13 @@ ggplot(data = plastic_waste,
 ```
 
 E4.  Convert your side-by-side box plots from the previous task to [violin plots](http://ggplot2.tidyverse.org/reference/geom_violin.html). What do the violin plots reveal that box plots do not? What features are apparent in the box plots but not in the violin plots?
-
-
+```{r plastic_waste_per_cap-box}
+ggplot(data = plastic_waste, 
+       mapping = aes(x = continent, 
+                     y = plastic_waste_per_cap)) +
+  geom_violin()
+```
+answer: box plots provide a coarser summary of the data, provide more of a summary of a distribution can also be seen sa an advantage in certain cases than violin plots.
 **Remember:** We use `geom_point()` to make scatterplots.
 
 
